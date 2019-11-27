@@ -1,0 +1,1932 @@
+[2019-11-27 02:13:04,817][MainThread][do_verify][DEBUG] Start function do_verify
+[2019-11-27 02:13:04,817][MainThread][auth][DEBUG] Start function auth
+[2019-11-27 02:13:04,818][MainThread][get_provider_address][DEBUG] Start function get_provider_address
+[2019-11-27 02:13:04,818][MainThread][get_proxy_address][DEBUG] Start function get_proxy_address
+[2019-11-27 02:13:04,818][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:04,818][MainThread][request_factory][DEBUG] Req type: auth, Request with arguments: URL: https://some-url.there//user/login Headers:  Payload: {'login': 'login', 'password': '123134', 'terminal': '1.1.1.0'} Method: POST Proxies: {} Timeout: 15 Verify: False
+[2019-11-27 02:13:04,892][MainThread][auth][ERROR] Exception in auth
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463CC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: //user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463CC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 61, in auth
+    timeout=AUTHORIZATION_REQUESTS_MAX_DURATION, req_type="auth")
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 239, in request_factory
+    verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: //user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463CC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:04,915][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:04,915][MainThread][request_factory][DEBUG] Req type: auth, Request with arguments: URL: https://some-url.there//user/login Headers:  Payload: {'login': 'login', 'password': '123134', 'terminal': '1.1.1.0'} Method: POST Proxies: {} Timeout: 15 Verify: False
+[2019-11-27 02:13:04,916][MainThread][auth][ERROR] Exception in auth
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468452A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: //user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468452A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 61, in auth
+    timeout=AUTHORIZATION_REQUESTS_MAX_DURATION, req_type="auth")
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 239, in request_factory
+    verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: //user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468452A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:04,921][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:04,921][MainThread][request_factory][DEBUG] Req type: auth, Request with arguments: URL: https://some-url.there//user/login Headers:  Payload: {'login': 'login', 'password': '123134', 'terminal': '1.1.1.0'} Method: POST Proxies: {} Timeout: 15 Verify: False
+[2019-11-27 02:13:04,922][MainThread][auth][ERROR] Exception in auth
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463F88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: //user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463F88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 61, in auth
+    timeout=AUTHORIZATION_REQUESTS_MAX_DURATION, req_type="auth")
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 239, in request_factory
+    verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: //user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463F88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:04,923][MainThread][do_verify][DEBUG] Not able to authenticate
+[2019-11-27 02:13:04,923][MainThread][do_replenishment][DEBUG] Start function do_replenishment
+[2019-11-27 02:13:04,923][MainThread][send_replenishment_request][DEBUG] Start function send_replenishment_request
+[2019-11-27 02:13:04,923][MainThread][get_provider_address][DEBUG] Start function get_provider_address
+[2019-11-27 02:13:04,923][MainThread][get_proxy_address][DEBUG] Start function get_proxy_address
+[2019-11-27 02:13:04,923][MainThread][cycle][DEBUG] Start function cycle
+[2019-11-27 02:13:04,923][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:04,923][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:04,925][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463EC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463EC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463EC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:04,926][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:06,927][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:06,927][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:06,929][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:06,930][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:08,930][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:08,930][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:08,932][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:08,934][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:10,935][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:10,935][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:10,965][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:10,968][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:12,968][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:12,968][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:12,969][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463EC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463EC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463EC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:12,975][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:14,976][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:14,976][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:14,977][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:14,980][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:16,980][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:16,980][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:17,810][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:17,812][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:19,813][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:19,813][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:19,815][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:19,817][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:21,818][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:21,818][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:23,014][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:23,018][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:25,018][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:25,018][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:25,019][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463CC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463CC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463CC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:25,022][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:27,023][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:27,023][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:28,237][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:28,239][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:30,240][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:30,240][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:30,242][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:30,244][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:32,244][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:13:32,244][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:13:33,557][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=None&date=2019-11-27T02:13:04 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000019468463E88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:13:33,563][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:13:35,563][MainThread][cycle][ERROR] Timeout max duration in ladle, cyclical: wrapper
+[2019-11-27 02:13:35,563][MainThread][send_replenishment_request][ERROR] Exception in send_replenishment_request
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 106, in send_replenishment_request
+    if response.state == 'Success':
+AttributeError: 'NoneType' object has no attribute 'state'
+[2019-11-27 02:13:35,563][MainThread][do_replenishment][ERROR] Exception in "do_replenishment": Create payment
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\main.py", line 61, in do_replenishment
+    response, runtime = utilities.send_replenishment_request(op_info)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 114, in send_replenishment_request
+    global_var.log.debug(f'After ladle send_replenishment_request {response.response_data}, '
+AttributeError: 'NoneType' object has no attribute 'response_data'
+[2019-11-27 02:13:35,563][MainThread][save_response_code_into_db][DEBUG] Start function save_response_code_into_db
+[2019-11-27 02:13:35,563][MainThread][do_replenishment][DEBUG] Function "do_replenishment": top up error response code 997 saved into db in 0:00:00
+[2019-11-27 02:20:02,852][MainThread][do_verify][DEBUG] Start function do_verify
+[2019-11-27 02:20:02,852][MainThread][auth][DEBUG] Start function auth
+[2019-11-27 02:20:02,852][MainThread][get_provider_address][DEBUG] Start function get_provider_address
+[2019-11-27 02:20:02,852][MainThread][get_proxy_address][DEBUG] Start function get_proxy_address
+[2019-11-27 02:20:02,852][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:02,852][MainThread][request_factory][DEBUG] Req type: auth, Request with arguments: URL: https://some-url.there/user/login Headers:  Payload: {'login': 'login', 'password': '123134', 'terminal': '1.1.1.0'} Method: POST Proxies: {} Timeout: 15 Verify: False
+[2019-11-27 02:20:02,874][MainThread][auth][ERROR] Exception in auth
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2BC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2BC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 61, in auth
+    timeout=AUTHORIZATION_REQUESTS_MAX_DURATION, req_type="auth")
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 239, in request_factory
+    verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2BC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:02,994][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:02,994][MainThread][request_factory][DEBUG] Req type: auth, Request with arguments: URL: https://some-url.there/user/login Headers:  Payload: {'login': 'login', 'password': '123134', 'terminal': '1.1.1.0'} Method: POST Proxies: {} Timeout: 15 Verify: False
+[2019-11-27 02:20:02,995][MainThread][auth][ERROR] Exception in auth
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 61, in auth
+    timeout=AUTHORIZATION_REQUESTS_MAX_DURATION, req_type="auth")
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 239, in request_factory
+    verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:02,998][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:02,998][MainThread][request_factory][DEBUG] Req type: auth, Request with arguments: URL: https://some-url.there/user/login Headers:  Payload: {'login': 'login', 'password': '123134', 'terminal': '1.1.1.0'} Method: POST Proxies: {} Timeout: 15 Verify: False
+[2019-11-27 02:20:02,999][MainThread][auth][ERROR] Exception in auth
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D29C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D29C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 61, in auth
+    timeout=AUTHORIZATION_REQUESTS_MAX_DURATION, req_type="auth")
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 239, in request_factory
+    verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /user/login (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D29C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:03,002][MainThread][do_verify][DEBUG] Not able to authenticate
+[2019-11-27 02:20:03,002][MainThread][do_replenishment][DEBUG] Start function do_replenishment
+[2019-11-27 02:20:03,002][MainThread][send_replenishment_request][DEBUG] Start function send_replenishment_request
+[2019-11-27 02:20:03,002][MainThread][get_provider_address][DEBUG] Start function get_provider_address
+[2019-11-27 02:20:03,002][MainThread][get_proxy_address][DEBUG] Start function get_proxy_address
+[2019-11-27 02:20:03,002][MainThread][cycle][DEBUG] Start function cycle
+[2019-11-27 02:20:03,002][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:03,002][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:03,004][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:03,005][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:05,005][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:05,005][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:05,007][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:05,008][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:07,009][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:07,009][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:07,010][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:07,014][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:09,015][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:09,015][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:09,637][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:09,639][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:11,639][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:11,639][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:11,640][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D26C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D26C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D26C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:11,642][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:13,643][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:13,643][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:14,932][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:14,939][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:16,940][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:16,940][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:16,942][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:16,945][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:18,945][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:18,945][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:20,044][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:20,048][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:22,049][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:22,049][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:22,050][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:22,057][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:24,057][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:24,057][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:25,179][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:25,182][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:27,182][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:27,182][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:27,184][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:27,186][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:29,187][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:29,187][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:30,468][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D26C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D26C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D26C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:30,470][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:32,471][MainThread][request_factory][DEBUG] Start function request_factory
+[2019-11-27 02:20:32,471][MainThread][request_factory][DEBUG] Req type: payment, Request with arguments: URL: https://some-url.there/?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 Headers:  Payload:  Method: GET Proxies: {} Timeout: 17 Verify: False
+[2019-11-27 02:20:32,473][MainThread][cycle][ERROR] Exception in ladle cycle
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Python3.7\Lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\urllib3\util\retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 206, in cycle
+    response, runtime = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 36, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 241, in request_factory
+    response = requests.get(address, headers=headers, proxies=proxies, timeout=timeout, verify=verify)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\root\PycharmProjects\payment_gateway\venv\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='some-url.there', port=443): Max retries exceeded with url: /?action=payment&number=11112222&amount=0.10&receipt=2&date=2019-11-27T02:20:03 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001EC047D2B48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+[2019-11-27 02:20:32,476][MainThread][cycle][DEBUG] Ladle sleeps 2 secs
+[2019-11-27 02:20:34,476][MainThread][cycle][ERROR] Timeout max duration in ladle, cyclical: wrapper
+[2019-11-27 02:20:34,476][MainThread][send_replenishment_request][ERROR] Exception in send_replenishment_request
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 106, in send_replenishment_request
+    if response.state == 'Success':
+AttributeError: 'NoneType' object has no attribute 'state'
+[2019-11-27 02:20:34,476][MainThread][do_replenishment][ERROR] Exception in "do_replenishment": Create payment
+Traceback (most recent call last):
+  File "C:\Users\root\PycharmProjects\payment_gateway\main.py", line 61, in do_replenishment
+    response, runtime = utilities.send_replenishment_request(op_info)
+  File "C:\Users\root\PycharmProjects\payment_gateway\utilities.py", line 114, in send_replenishment_request
+    global_var.log.debug(f'After ladle send_replenishment_request {response.response_data}, '
+AttributeError: 'NoneType' object has no attribute 'response_data'
+[2019-11-27 02:20:34,501][MainThread][save_response_code_into_db][DEBUG] Start function save_response_code_into_db
+[2019-11-27 02:20:34,501][MainThread][do_replenishment][DEBUG] Function "do_replenishment": top up error response code 997 saved into db in 0:00:00

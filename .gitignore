@@ -1,3 +1,4 @@
-/LOGS
+/LOGS/*
 core.py
 *.log
+.idea
